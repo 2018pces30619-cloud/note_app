@@ -17,7 +17,7 @@ add_executable(BranchNotes WIN32
 )
 set_target_properties(BranchNotes PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/deliverable"
-    OUTPUT_NAME "BranchNotes-Map-Exact-Clip"
+    OUTPUT_NAME "BranchNotes"
     MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
 )
 
@@ -29,3 +29,12 @@ if(MSVC)
 endif()
 
 target_link_libraries(BranchNotes PRIVATE comctl32 comdlg32 shell32 ole32)
+
+install(TARGETS BranchNotes RUNTIME DESTINATION .)
+install(FILES "${CMAKE_SOURCE_DIR}/使用说明.txt" DESTINATION .)
+
+set(CPACK_GENERATOR "ZIP")
+set(CPACK_PACKAGE_NAME "BranchNotes")
+set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
+set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-win64")
+include(CPack)
