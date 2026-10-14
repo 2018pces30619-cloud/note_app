@@ -51,6 +51,10 @@ The executable is written to `build/deliverable/Release/BranchNotes.exe`.
 
 The package is written to `release/BranchNotes-0.1.0-win64.zip` and contains `BranchNotes.exe` and `使用说明.txt`.
 
+## License
+
+BranchNotes is distributed under the [MIT License](LICENSE).
+
 ## Data and backups
 
 Notes and mind maps are stored locally under `%LOCALAPPDATA%\BranchNotes\Notes`. To back up your data, close the application and copy that folder. Deleting a note moves its files to the Windows Recycle Bin.
@@ -114,7 +118,11 @@ BranchNotes 是一款以 C++20、Win32 API 和 CMake 開發的 Windows 本機筆
 & "C:\Program Files\CMake\bin\cpack.exe" --config build/CPackConfig.cmake -C Release -B release
 ```
 
-套件會輸出至 `release/BranchNotes-0.1.0-win64.zip`，內含 `BranchNotes.exe` 和 `使用說明.txt`。
+套件會輸出至 `release/BranchNotes-0.1.0-win64.zip`，內含 `BranchNotes.exe` 和 `使用说明.txt`。
+
+### 授權
+
+BranchNotes 採用 [MIT 授權](LICENSE)。
 
 ### 資料與備份
 
@@ -126,3 +134,4 @@ BranchNotes 是一款以 C++20、Win32 API 和 CMake 開發的 Windows 本機筆
 - `src/platform/win32/` — Win32 視窗和訊息迴圈。
 - `include/branchnotes/` — 程式介面標頭檔。
 - `prototypes/` — 不會編入正式程式的介面實驗版本。
+

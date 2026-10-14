@@ -31,10 +31,11 @@ endif()
 target_link_libraries(BranchNotes PRIVATE comctl32 comdlg32 shell32 ole32)
 
 install(TARGETS BranchNotes RUNTIME DESTINATION .)
-install(FILES "${CMAKE_SOURCE_DIR}/使用说明.txt" DESTINATION .)
+install(FILES "${CMAKE_SOURCE_DIR}/使用说明.txt" "${CMAKE_SOURCE_DIR}/LICENSE" DESTINATION .)
 
 set(CPACK_GENERATOR "ZIP")
 set(CPACK_PACKAGE_NAME "BranchNotes")
 set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
 set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-win64")
 include(CPack)
+
